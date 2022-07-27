@@ -1,6 +1,6 @@
 {
   "name": "databridges-sio-client-lib",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "DataBridges Node.js client Library. Register at https://www.databridges.io",
   "keywords": [
     "optomate",
@@ -34,6 +34,7 @@
   "deprecated": false,
   "dependencies": {
     "node-fetch": "^2.6.1",
-    "socket.io-client": "^3.0.5"
+    "socket.io-client": "^3.0.5",
+    "moment": "^2.29.4"
   }
 }
