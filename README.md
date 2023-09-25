@@ -650,8 +650,8 @@ try {
     "eventname": "event",				// (string) eventName 
     "sourcesysid": "", 					// (string) Sender system identity, applicable only for presence or system channel.
     "sqnum": "1",						// (string) user defined, sent during publish function.
-    "sessionid": "", 					// @Pradeep not applicable for client library
-    "intime": 1645554960732  			// (string) @pradeep EPOC time when the event was received by dataBridges router for processing.
+    "sessionid": "", 					
+    "intime": 25  						// (int) Intime is a metric that quantifies the routing latency within the messaging infrastructure, specifically within the context of the messaging platform. It measures the time it takes for an event message to traverse from the moment it is received by the messaging  to the instant it is dispatched to the subscriber(s) of the event. InTime is expressed in milliseconds (ms) and serves as a crucial indicator of the efficiency and responsiveness of the messaging system. This metric Not applicable for system events.
 }
 ```
 
@@ -774,8 +774,8 @@ try {
     "eventname": "dbridges:subscribe.success",// (string) eventName 
     "sourcesysid": "", 					// (string) Sender system identity, applicable only for presence or system channel.
     "sqnum": "1",						// (string) user defined, sent during publish function.
-    "sessionid": "", 					// (string) @pradeep Not applicable for client library
-    "intime": 1645554960732  			// (string) @pradeep  EPOC time when the event was received by dataBridges router for processing.
+    "sessionid": "", 					
+    "intime": null  			
 }
 ```
 
@@ -802,7 +802,7 @@ try {
     "sourcesysid": "", 					// (string) 
     "sqnum": "",						// (string) 
     "sessionid": "", 					// (string) 
-    "intime": 	  						// (string) 
+    "intime": null
 }
 ```
 
@@ -823,7 +823,7 @@ try {
     "sourcesysid": "", 					// (string) 
     "sqnum": "",						// (string) 
     "sessionid": "", 					// (string) 
-    "intime": 	  						// (string) 
+    "intime": null
 }
 ```
 
@@ -844,7 +844,7 @@ try {
     "sourcesysid": "", 					// (string) 
     "sqnum": "",						// (string) 
     "sessionid": "", 					// (string) 
-    "intime": 	  						// (string) 
+    "intime": null
 }
 ```
 
@@ -865,7 +865,7 @@ try {
     "sourcesysid": "", 					// (string) 
     "sqnum": "",						// (string) 
     "sessionid": "", 					// (string) 
-    "intime": 	  						// (string) 
+    "intime": null
 }
 ```
 
@@ -886,7 +886,7 @@ try {
     "sourcesysid": "", 					// (string) 
     "sqnum": "",						// (string) 
     "sessionid": "", 					// (string) 
-    "intime": 	  						// (string) 
+    "intime": null
 }
 ```
 
@@ -913,7 +913,7 @@ try {
     "sourcesysid": "", 					// (string) 
     "sqnum": "",						// (string) 
     "sessionid": "", 					// (string) 
-    "intime": 	  						// (string) 
+    "intime": null 
 }
 ```
 
@@ -934,7 +934,7 @@ try {
     "sourcesysid": "", 					// (string) 
     "sqnum": "",						// (string) 
     "sessionid": "", 					// (string) 
-    "intime": 	  						// (string) 
+    "intime": null
 }
 ```
 
@@ -975,7 +975,7 @@ This will be triggered only for **presence** `(prs:)` and **system** `(sys:)` ch
 
 ```javascript
 {
-  "sessionid": NA, 	// @pradeep This is not applicable for client lib. This needs to be updated across client doc
+  "sessionid": null, 	
   "libtype": "nodejs", 						// (string) Library Lang of the member who has subscribed/connected to channel
   "sourceipv4": "0.0.0.0", 					// (string) IPv4 of the member who has subscribed/connected to channel
   "sourceipv6": "::1", 						// (string) Not Applicable in current version.
@@ -990,9 +990,9 @@ This will be triggered only for **presence** `(prs:)` and **system** `(sys:)` ch
     "channelname": "prs:channelName" , 		// (string) channelName to which subscription is done.
     "eventname": "dbridges:participant.joined",// (string) eventName 
     "sourcesysid": "nameofcaller", 			// (string) Sys id of the member who has subscribed/connected to channel
-    "sqnum": null,							// (string) 
-    "sessionid": NA, 	// @pradeep This is not applicable for client lib. This needs to be updated across client doc
-    "intime": null	  						// (string) 
+    "sqnum": null,							 
+    "sessionid": null, 	
+    "intime": null	  						
 }
 ```
 
@@ -1006,7 +1006,7 @@ This will be triggered only for **presence** `(prs:)` and **system** `(sys:)` ch
 
 ```javascript
 {
-  "sessionid": NA, 	// @pradeep This is not applicable for client lib. This needs to be updated across client doc
+  "sessionid": null, 	
   "libtype": "nodejs", 						// (string) Library Lang of the member who has subscribed/connected to channel
   "sourceipv4": "0.0.0.0", 					// (string) IPv4 of the member who has subscribed/connected to channel
   "sourceipv6": "::1", 						// (string) Not Applicable in current version.
@@ -1021,9 +1021,9 @@ This will be triggered only for **presence** `(prs:)` and **system** `(sys:)` ch
     "channelname": "prs:channelName" , 		// (string) channelName to which subscription is done.
     "eventname": "dbridges:participant.left",// (string) eventName 
     "sourcesysid": "nameofcaller", 			// (string) Sys id of the member who has subscribed/connected to channel
-    "sqnum": null,							// (string) 
-    "sessionid": NA, 	// @pradeep This is not applicable for client lib. This needs to be updated across client doc
-    "intime": null	  						// (string) 
+    "sqnum": null,							
+    "sessionid": null, 	
+    "intime": null	  						
 }
 ```
 
@@ -1044,7 +1044,7 @@ This will be triggered only for **presence** `(prs:)` and **system** `(sys:)` ch
     "sourcesysid": "", 					// (string) 
     "sqnum": "",						// (string) 
     "sessionid": "", 					// (string) 
-    "intime": 	  						// (string) 
+    "intime":null 
 }
 ```
 
@@ -1071,7 +1071,7 @@ This will be triggered only for **presence** `(prs:)` and **system** `(sys:)` ch
     "sourcesysid": "", 					// (string) 
     "sqnum": "",						// (string) 
     "sessionid": "", 					// (string) 
-    "intime": 	  						// (string) 
+    "intime": null
 }
 ```
 
@@ -1092,7 +1092,7 @@ This will be triggered only for **presence** `(prs:)` and **system** `(sys:)` ch
     "sourcesysid": "", 					// (string) 
     "sqnum": "",						// (string) 
     "sessionid": "", 					// (string) 
-    "intime": 	  						// (string) 
+    "intime": null
 }
 ```
 
@@ -1119,7 +1119,7 @@ This will be triggered only for **presence** `(prs:)` and **system** `(sys:)` ch
     "sourcesysid": "", 					// (string) 
     "sqnum": "",						// (string) 
     "sessionid": "", 					// (string) 
-    "intime": 	  						// (string) 
+    "intime": null
 }
 ```
 
@@ -1140,7 +1140,7 @@ This will be triggered only for **presence** `(prs:)` and **system** `(sys:)` ch
     "sourcesysid": "", 					// (string) 
     "sqnum": "",						// (string) 
     "sessionid": "", 					// (string) 
-    "intime": 	  						// (string) 
+    "intime": null
 }
 ```
 
@@ -1167,7 +1167,7 @@ This will be triggered only for **presence** `(prs:)` and **system** `(sys:)` ch
     "sourcesysid": "", 					// (string) 
     "sqnum": "",						// (string) 
     "sessionid": "", 					// (string) 
-    "intime": 	  						// (string) 
+    "intime": null
 }
 ```
 
@@ -1204,7 +1204,7 @@ Concepts
   - The server application's corresponding function will be invoked with the IN.parameter and it will respond with response() or exception() which will be delivered back to the CALLEE client application by dataBridges network completing the request-response communication.
 -  Client application need not be aware about RPC servers identity and will only interact with RPC server namespace. The dataBridges network will intelligently route and load balance RPC call() to the RPC server application. The dataBridges network will automatically load balance multiple instance of server application exposing the same RPC endpoints.
 - Trust-tokens are supported by RPC as well. You will need to pass a trust-token when you connect to the access controlled RPC endpoint. A trust-token is a JWT document created using a combination of rpc server endpoint / server name + sessionid + app.secret. 
-  - Use your existing access control,  authorization and session identification rule-set, process and methods to create a trust-token instructing the dataBridges router to accept the pvt: prs: rpc endpoint/server connection of from client application.
+  - Use your existing access control,  authorization and session identification rule-set, process and methods to create a trust-token instructing the dataBridges router to accept the pvt:, prs:, sys:dbridge rpc endpoint/server connection of from client application.
 - Trust-tokens allows you to enable secured, access controlled and compliance driven reliable two-way messaging (request-response)  in your existing and new initiative applications.
 
 ### Connect to Server
@@ -1223,9 +1223,9 @@ try {
 }
 ```
 
-| Parameter | Rules                                                        | Description                                  |
-| --------- | ------------------------------------------------------------ | -------------------------------------------- |
-| `string`  | *serverName  **OR**<br />**pvt:**serverName **OR**<br />**prs:**serverName* | *server*Name to which connection to be done. |
+| Parameter | Rules                                                        | Description                                                  |
+| --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `string`  | *serverName  **OR**<br />**pvt:**serverName **OR**<br />**prs:**serverName**OR**<br />**sys:dbridges** | *server*Name to which connection to be done.<br />For RPC System Calls use **sys:dbridges** |
 
 | Return Type | Description                                                  |
 | ----------- | ------------------------------------------------------------ |
@@ -1249,10 +1249,6 @@ try {
 ```js
 const rpcClient_isonline = rpcClient.isOnline(); 
 ```
-
-| Parameter | Rules                                                        | Description                                    |
-| --------- | ------------------------------------------------------------ | ---------------------------------------------- |
-| `string`  | *serverName  **OR**<br />**pvt:**serverName **OR**<br />**prs:**serverName* | *server*Name to which subscription to be done. |
 
 | Return Values | Description                                                  |
 | ------------- | ------------------------------------------------------------ |
@@ -1508,7 +1504,82 @@ dbridge.rpc.unbind_all();
 | DBLIB_RPC_CONNECT | ACCESS_TOKEN_FAIL |                 | Specific to **private** `(pvt:)` or **presence** (`prs:`) rpc call. Access token validation failed at dataBridges network. |
 | DBLIB_RPC_CONNECT | ACCESS_DENIED     | `error_message` | Specific to **private** `(pvt:)` or **presence** (`prs:`) rpc call. This is returned by the `access_token` function execution before `call()` is made. |
 
+### System RPC functions (Predefined)
 
+#### sse.subscribechannel
+
+This function is used for SSE connection to subscribe to **private** `(pvt:)` or **presence** (`prs:`) channel.
+
+##### Input parameters
+
+```javascript
+{
+    "targetsessionid": "<SSESessionId>" , 	// (string) SSE session Id
+ 	"channel":"<channelName>",					// (string) Channel name to subscribe
+    "accesskey" : "<accessToken>"				// (string) Provice JWT token, as per specification in Channels document. 
+}
+```
+
+| Return Values                                                | Description                          |
+| ------------------------------------------------------------ | ------------------------------------ |
+| `{ "status": "SUBSCRIPTION_SUCCESS", "message": "Subscription successful" }` | JSON object with status and message. |
+
+##### Function specific exceptions: 
+
+| Source         | Code                    | Description                     |
+| -------------- | ----------------------- | ------------------------------- |
+| DBNET_RPC_CALL | ERR_INVALID_FUNCTION    | Function name invalid           |
+| DBNET_RPC_CALL | ERR_TARGET_DISCONNECTED | Target session is disconnected. |
+| DBNET_RPC_CALL | ERR_INVALID_PARAM       | Invalid Session Id              |
+| DBNET_RPC_CALL | ERR_INVALID_PARAM       | Wrong parameter                 |
+
+#### session.disconnect
+
+This function is used to disconnect a connected socket session. This is not applicable for SSE.
+
+##### Input parameters
+
+```javascript
+{
+    "targetsessionid": "targetSessionId" , 	// (string) Target Session Id
+}
+```
+
+| Return Values | Description               |
+| ------------- | ------------------------- |
+| `string`      | "SessionId Disconnected." |
+
+##### Function specific exceptions: 
+
+| Source         | Code                 | Description                                      |
+| -------------- | -------------------- | ------------------------------------------------ |
+| DBNET_RPC_CALL | ERR_INVALID_FUNCTION | Function name invalid                            |
+| DBNET_RPC_CALL | ERR_INVALID_PARAM    | Invalid Session Id                               |
+| DBNET_RPC_CALL | ERR_INTERNAL_ERROR   | Error occured when trying to disconnect session. |
+
+#### session.reconnect
+
+This function is used to reconnect a connected socket session. This is not applicable for SSE.
+
+##### Input parameters
+
+```javascript
+{
+    "targetsessionid": "targetSessionId" , 	// (string) Target Session Id
+}
+```
+
+| Return Values | Description                          |
+| ------------- | ------------------------------------ |
+| `string`      | "Session Id Reconnect request sent." |
+
+##### Function specific exceptions: 
+
+| Source         | Code                 | Description                                      |
+| -------------- | -------------------- | ------------------------------------------------ |
+| DBNET_RPC_CALL | ERR_INVALID_FUNCTION | Function name invalid                            |
+| DBNET_RPC_CALL | ERR_INVALID_PARAM    | Invalid Session Id                               |
+| DBNET_RPC_CALL | ERR_INTERNAL_ERROR   | Error occured when trying to disconnect session. |
 
 ------
 
